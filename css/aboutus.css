@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+/* General Propeties */
+body
+{
+	margin: 0;
+	padding: 0;
+	background: #000;
+	font-family: lato;
+
+}
+* { 
+  margin: 0px;  
+  padding: 0px; 
+  box-sizing: border-box;}  
+
+a {  /* a tags */
+  color: transparent; /* Color transparent */
+  text-decoration: none;}  /* remove any text decoration*/
+/* End */
+
+
+/* Defining the Rocket */
+.rocket
+{
+	width: 100%;
+	height: 100vh;
+	top: 300px;
+	overflow: hidden;
+	position: absolute;
+	background-attachment: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/* Defining the Main Text  */
+.header
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: url(../img/space.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+/* Defining the Header Text  */
+.header h2
+{
+
+	margin: 0;
+	padding:0;
+	font-size: 5em;
+	background: #fff;
+	color: #000;
+	padding: 20px;
+	text-align: center;
+	max-height: 80%;
+	box-shadow: 0 20px 20px rgba(0,0,0,.5)
+}
+/* Section fot the Text  */
+section
+{
+	position: relative;
+	top: 100vh;
+	padding: 100px;
+	width:100%;
+	min-height: 100vh;
+	box-sizing: border-box;
+}
+/* Properties for the Header Text  */
+section h2
+{
+	margin: 0 0 50px;
+	padding: 0;
+	font-size: 3.5em;
+	color: #fff;
+}
+/* Properties for the paragraph Text  */
+section p
+{
+	color: #fff;
+	font-size: 1.3em;
+}
+/* Customizing the ScrollBar  */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: black; 
+}
+ 
+
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+/* End */
+
+
+/* Nav bar style */
+.menu {   /* Defining Bottom Nav Bar */
+  text-transform: uppercase;  /* Maded it Uppercase */
+  color: white;  /* color white */ 
+  position: absolute; /*Postion absolite */
+  bottom: 8%;  /* 8 % from the botom */
+  left: 12%;  /* 12% from the left side*/
+  z-index: 100;
+
+  }  /* Z-index */
+
+.menu:hover {
+  opacity: 1; /* When u hover over Quick menu it will make the opacity full */
+}
+
+.label {  /* aka Quick menu*/
+  display: inline-block;  /* inline for the bottom plants */
+  cursor: pointer;  /* Changes to a hand Pointer to indicate clickable */
+}
+
+.planet-names {
+  position: relative;   /* Postion relative to the screen */
+  display: inline-block;  /* The planet Names inline */
+  margin-right: 30px;  /*S paceing fom the right side */
+  top: 10px; /* Spacing from "quick menu" and the planet-names */
+  opacity: 0.4;  /* Allows it to be half Faded */
+  padding-top: 10px; /* Spacing  from the top */
+  padding-bottom: 20px; /* Spacomg from the bottom */
+}
+
+.pluto {  /* Becuase Pluto Is always there in our hearts */  
+  position: relative;   /* Postion relative to the screen */
+  display: inline-block;  /* The planet Names inline */
+  margin-right: 30px;  /*S paceing fom the right side */
+  top: 10px; /* Spacing from "quick menu" and the planet-names */
+  opacity: 0.4;  /* Allows it to be half Faded */
+  padding-top: 10px; /* Spacing  from the top */
+  padding-bottom: 20px; /* Spacomg from the bottom */
+}
+
+.menu:hover .planet-names:nth-child(11) {opacity: 0.4;}
+
+/* Navbar Animation */
+span {transition: color 0.1s ease;}  /* Transtion From White to Red */
+
+.planet-names:hover span {color: #ff0000;}  /* When hover turns one planet-names Red*/
+.menu:hover .planet-names { opacity: 1; }  /*Opacity Full when Hovering over planet-names */

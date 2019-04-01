@@ -1,0 +1,176 @@
+/* importing fonts */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+/* Setting the Background */
+
+a {
+  color: transparent;
+  text-decoration: none;
+}
+
+body {
+  font-size: 15px;
+  font-family: Raleway, sans-serif;;
+  font-weight: 1;
+  background-color: black;
+  color: rgba(255,255,255,1);  
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; 
+}
+
+html{
+  min-height: 100%;
+  overflow: hidden; 
+}
+
+body{ 
+  height: calc(100vh - 8em);
+  background: black;
+ }
+ /*END */
+
+
+
+/* Background Style */
+
+.stars, .twinkling{
+  position:absolute;
+  width:100%;
+  height:100%;
+  display: block;
+  z-index: -1; 
+}
+
+.stars {background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;}
+
+.twinkling{
+  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  animation:move-twink-back 200s linear infinite;
+}
+/*END */
+
+
+
+
+/* Nav bar Style */
+.menu {   /* Defining Bottom Nav Bar */
+  text-transform: uppercase;  
+  color: white;  
+  position: absolute; 
+  bottom: 8%;  
+  left: 12%;  
+  z-index: 100;
+  } 
+
+.menu:hover {
+  opacity: 1; /* When u hover over Quick menu it will make the opacity full */
+}
+
+.label {  /* aka the name Quick menu*/
+  display: inline-block; 
+  cursor: pointer;  
+}
+
+.planet-names {
+  position: relative;   
+  display: inline-block;  
+  margin-right: 30px;  
+  top: 10px; 
+  opacity: 0.4;  
+  padding-top: 10px; 
+  padding-bottom: 20px; 
+}
+
+.pluto {  
+  position: relative;  
+  display: inline-block;  
+  margin-right: 30px;  
+  top: 10px; 
+  opacity: 0.4;
+}
+
+.menu:hover .planet-names:nth-child(11) {opacity: 0.4;}
+/*END */
+
+
+/* Navbar Animation */
+span {transition: color 0.1s ease;}  /* Transtion From White to Red */
+
+.planet-names:hover span {color: #ff0000;}  /* When hover turns one planet-names Red*/
+.menu:hover .planet-names { opacity: 1; }  /*Opacity Full when Hovering over planet-names */
+/*END */
+
+
+/* Footer text */
+p {
+  position:fixed;
+  width:100;
+  top: 2px;
+  left: 2px;
+  font-size:12px;
+  color:#999;
+}
+/*END */
+
+
+/* Main Title  "Spacely" */
+.text{
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 200%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%); 
+  }
+
+.anim-text{
+  animation: text 2s steps(560) 1s 0.26 normal both,
+             blinkTextCursor 500ms steps(20) infinite normal; 
+           }
+
+.coordinates {
+    transform: rotate(-90deg) translateY(50%);
+    position: absolute;
+    top: 45%;
+    left: -20px;
+    z-index: 10;
+}
+/*END */
+
+
+/* Typewriter Animation */
+
+@keyframes text{
+  from{width: 0;}
+  to{width: 24em;} 
+}
+
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;} 
+}
+
+@media screen and (max-width: 1000px) {
+  .menu { bottom:0%;} 
+}
+/*END */
+
+
+/* Background Animation */
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+/*END */

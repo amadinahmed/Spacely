@@ -1,0 +1,61 @@
+/* importing fonts */
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+/* Setting the Background and Misc*/
+
+* { 
+  margin: 0px;  
+  padding: 0px; 
+  overflow-x: hidden;
+  overflow-y: hidden;
+  box-sizing: border-box;
+} 
+
+a {  /* a tags removing color and underline */
+  color : white;
+  text-decoration: none;
+}  
+
+body {
+  font-size: 15px; 
+  font-weight: 1;  
+  background-color: blue;  
+  font-family: Raleway, sans-serif;
+}
+
+/* End */
+
+/* Code qualitiys  */
+
+body {
+    background: #081421;
+    font-family: "Courier new"; 
+    wcursor: default;
+}
+
+.code {
+  top: 50%;
+  left: 50%;
+  width: 650px;
+  height: 300px;
+  margin-left: -200px;
+  margin-top: -100px;
+  position: absolute;
+}
+
+code {color: white;}/* Colors  */
+span.blue {color: #48beef;}
+span.comment {color: #7f8c8d;}
+span.orange {color: #f39c12;}
+span.green {color: #32cd32;}
+span.red {color:#cd5c5c;}
+span.purple {color: purple;}
+
+.labelback .labelforward{cursor: pointer;}/* Changes to a hand Pointer to indicate clickable */
+
+.label:hover{color: #ff0000;}/* red hover when hovering over the back button */
+
+/* End */

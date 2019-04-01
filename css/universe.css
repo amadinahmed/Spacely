@@ -1,0 +1,452 @@
+/* importing fonts */
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+
+
+* { 
+  margin: 0px;  
+  padding: 0px;
+  box-sizing: border-box;} 
+
+/* Removeing a-tag color and removing the underline */
+a {  
+  color: transparent; 
+  text-decoration: none;
+}
+
+/* Body Quailitys */
+body {
+  font-size: 15px; 
+  font-weight: 1;  
+  background-color: black;
+  overflow-x: hidden;
+  overflow-y: hidden;  
+  font-family: Raleway, sans-serif;
+} 
+
+/* Text Quailitys */
+p {
+  position:fixed;
+  width:100;
+  top: 2px;
+  left: 2px;
+  font-size:12px;
+  color:#999;
+  z-index: 100000;
+}
+
+
+/* Nav bar style */
+.menu {   /* Defining Bottom Nav Bar */
+  text-transform: uppercase;  
+  color: white;  
+  position: absolute; 
+  bottom: 8%;  
+  left: 12%;  
+  z-index: 100;
+} 
+
+.menu:hover {
+  opacity: 1; /* When u hover over Quick menu it will make the opacity full */
+}
+
+.label {  /* aka the name Quick menu */
+  display: inline-block;  
+  cursor: pointer;  
+}
+
+.planet-names { /* planet names Quailitys */
+  position: relative;   
+  display: inline-block;  
+  margin-right: 30px;  
+  top: 10px; 
+  opacity: 0.4; 
+  padding-top: 10px; 
+  padding-bottom: 20px; 
+}
+
+.pluto {  /* Because Pluto is in our hearts */  
+  position: relative;   
+  display: inline-block;  
+  margin-right: 30px; 
+  top: 10px; 
+  opacity: 0.4;  
+  padding-top: 10px; 
+  padding-bottom: 20px;
+}
+
+.menu:hover .planet-names:nth-child(11) {opacity: 0.4;}
+/*END */
+
+
+/* Navbar Animation */
+span {transition: color 0.1s ease;}  /* Transtion From White to Red */
+
+.planet-names:hover span {color: #ff0000;}  /* When hover turns one planet-names Red*/
+.menu:hover .planet-names { opacity: 1; }  /*Opacity Full when Hovering over planet-names */
+/*END */
+
+
+/* Background */
+.stars, .twinkling{   /* Credit : https://www.script-tutorials.com/night-sky-with-twinkling-stars/ */
+  position:fixed;  
+  width:100%;     
+  height:100%;       
+  z-index: -7;
+}      
+
+.stars {background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;}
+
+.twinkling{
+  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  animation:move-twink-back 200s linear infinite;
+}
+
+/* Defining Planets and the Universe */
+
+#universe {
+  z-index: 1; 
+  position: absolute; 
+  width: 100%; 
+  height: 100%; 
+} 
+
+#solar-system {
+  position: absolute; 
+  width: 100%; 
+  height: 100%; 
+  transform-style: preserve-3d; 
+} /* Specifies that child elements will preserve its 3D position */
+
+.path {
+  position: absolute; 
+  top: 50%;  
+  left: 50%; 
+  border: 3px solid rgba(255, 255, 255, 0.1); /* Creating the path outline */
+  border-radius: 50%; /* Truns the path into a circle */
+  transform-style: preserve-3d; 
+  animation-name: path; /* Calling the Keyframe path  */
+  animation-iteration-count: infinite; /* makes the anim go on forever and ever */
+  animation-timing-function: linear; 
+} /* The animation has the same speed from start to end */
+
+.position { /* Defineing the position */
+  position: absolute; 
+  top: 50%; 
+  width: 2em; 
+  height: 2em; 
+  margin-top: -1em; 
+  margin-left: -1em; 
+  transform-style: preserve-3d; /* Specifies that child elements will preserve its 3D position  */
+  animation-name: rotate; /* Refernce Rotate anim */
+  animation-iteration-count: infinite; 
+  animation-timing-function: linear; 
+} 
+
+#sun, .planet, #earth {
+  position: absolute; /* positioning fot the div */
+  top: 50%; 
+  left: 50%; 
+  width: 1em; 
+  height: 1em;
+  margin-top: -0.5em;  /* Spacing of planet earth and sun Default */
+  margin-left: -0.5em; /* Spacng of planet earth and sun Default      So why: if they fail they will still show yet skewd*/
+  border-radius: 50%; 
+  transform-style: preserve-3d; 
+} /* Specifies that child elements will preserve its 3D position */
+
+#sun { background-color: #fad208; } /*  */
+
+.planet {
+  background-size: cover; /* We Cover the background Size becuase it will allow us to use it in the 3D-view */
+  animation-iteration-count: infinite; 
+  animation-timing-function: linear; 
+} 
+
+.ring { /* Creating the Ring for Saturan */
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  border-radius: 50%; 
+} 
+
+#saturn .ring { /* The inner Ring */
+  width: 2em;
+  height: 2em; 
+  margin-top: -1em;
+  margin-left: -1em;
+  border: 0.3em solid rgba(212, 187, 154, 0.7); /* color of inner ring */
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+} 
+
+#saturn .ring:after { /* Creating the Otter Ring */
+  border-radius: 50%;
+  position: absolute; 
+  content: ''; 
+  top: 50%; 
+  left: 50%; 
+  width: 2.2em; 
+  height: 2.2em; 
+  margin-top: -1.1em; 
+  margin-left: -1.1em; 
+  border: 0.07em solid rgba(212, 187, 154, 0.5); 
+  box-sizing: border-box;  
+  } /* Allow ths ring to pass the parent div */
+
+/*END */
+
+/*  Planets Z- index  */
+#mercury { z-index: 10; }
+#venus { z-index: 9; }
+#earth { z-index: 8; }
+#mars { z-index: 6; }
+#jupiter { z-index: 5; }
+#saturn { z-index: 4; }
+#uranus { z-index: 3; }
+#neptune { z-index: 2; }
+#sun { z-index: 1; }
+
+/*END */
+
+/* Creating the Fake 3d-view */
+.view-3D #solar-system { transform: rotateX(75deg); }  /* Rotated the Solar System 75 deg  */ /* We did this to make the Solar system seem as if it was in a 3d view */
+.view-3D #sun { transform: rotateX(-90deg); } /* Rotated Sun 90 deg  */ /* To make the sun Stand up Right */
+.view-3D .ring { transform: rotateX(90deg); } /* Rotated ring 90 deg  */ /* To make the ring Stand up Right */
+.view-3D .planet { transform: rotateX(0deg); }  /* Rotated planet 90 deg  */ /* To make the planet Stand up Right */
+/* Refereance: https://stackoverflow.com/questions/14233341/how-can-i-rotate-an-html-div-90-degrees*/ 
+
+/*END */
+
+/* Allows us to it the entire project on the screen */
+.fit #solar-system { width: 100%; }
+/*END */
+
+/* 
+Animate Duration for Each Planet 
+Each Planet Speed is Realtive to 1sec - 1earth year
+Revolution of planets in earth days (from Wikipedia)
+ */
+#mercury .position, #mercury .planet, #mercury.path { animation-duration: 2s; } 
+#venus .position, #venus .planet, #venus.path { animation-duration: 7s; }  
+#earth .position, #earth .planet, #earth.path { animation-duration: 12s; }
+#earth .path .position, #earth .path { animation-duration: 0.9s; } 
+#mars .position, #mars .planet, #mars.path { animation-duration: 22s; }  
+#jupiter .position, #jupiter .planet, #jupiter.path { animation-duration: 142s; }  
+#saturn .position, #saturn .planet, #saturn.path, #saturn .ring { animation-duration: 353s; } 
+#uranus .position, #uranus .planet, #uranus.path { animation-duration: 1008s; }  
+#neptune .position, #neptune .planet, #neptune.path { animation-duration: 1977s; }
+/*END */
+
+
+/* Size of the Planets */
+.size #sun { font-size: 22em; }
+.size #mercury .planet { font-size: 1.5em; }
+.size #venus .planet { font-size: 3.72em; }
+.size #earth .planet { font-size: 3.92em; }
+.size #mars .planet { font-size: 2.9em; }
+.size #jupiter .planet { font-size: 12em; }
+.size #saturn .planet { font-size: 10.8em; }
+.size #uranus .planet { font-size: 4.68em; }
+.size #neptune .planet { font-size: 4.9em; }
+/*END */
+
+/* Stretched paths for Each Planet */
+.size #mercury.path { /* Mercury Dimensions*/
+  width: 32em;  
+  height: 32em; 
+  margin-top: -16em; 
+  margin-left: -16em; 
+}
+.size #venus.path {   /* Venus Dimensions*/
+  width: 40em; 
+  height: 40em; 
+  margin-top: -20em; 
+  margin-left: -20em; 
+} 
+.size #earth.path {   /* Earth Dimensions*/
+  width: 56em; 
+  height: 56em; 
+  margin-top: -28em;  
+  margin-left: -28em; 
+} 
+
+.size #mars.path {    /* Mars Dimensions*/
+  width: 72em;  
+  height: 72em;
+  margin-top: -36em;  
+  margin-left: -36em; 
+} 
+.size #jupiter.path {  /* Jupiter Dimensions*/
+  width: 100em;
+  height: 100em; 
+  margin-top: -50em;  
+  margin-left: -50em; 
+} 
+.size #saturn.path {   /* Saturn Dimensions*/
+  width: 150em; 
+  height: 150em;  
+  margin-top: -75em;  
+  margin-left: -75em; 
+}
+.size #uranus.path {   /* Uranus Dimensions*/
+  width: 186em; 
+  height: 186em;  
+  margin-top: -93em;  
+  margin-left: -93em; 
+} 
+.size #neptune.path {   /* Neptune Dimensions*/
+  width: 186em; 
+  height: 186em;  
+  margin-top: -97em;
+  margin-left: -97em;
+} 
+
+/*END */
+
+
+#mercury  .position { left: 50%; top: -1%; } /* mercury starting postion */
+#venus  .position { left: 0; top: 50%; } /* venus starting postion */
+#earth  .position { left: 100%;  top: 50%; } /* earth starting postion */
+#mars  .position { left: 50%; top: 100%; } /* mars starting postion */
+#jupiter  .position { left: 100%; top: 50%; } /* jupiter starting postion */
+#saturn  .position { left: 0%; top: 50%; } /* saturn starting postion */
+#uranus  .position { left: 0; top: 50%; } /* uranus starting postion */
+#neptune  .position { left: 50%; top: 0; }  /* neptune starting postion */
+
+/* Shadows for planet rotations */
+#mercury .planet {animation-name: shadowMercury; }
+#venus .planet {animation-name: shadowVenus; }
+#earth .planet {animation-name: shadowEarth; }
+#mars .planet {animation-name: shadowMars; }
+#jupiter .planet {animation-name: shadowJupiter; }
+#saturn .planet {animation-name: shadowSaturn; }
+#uranus .planet {animation-name: shadowUranus;}
+#neptune .planet { animation-name: shadowNeptune; }
+/*END */
+
+/* Imgs */
+
+#mercury .planet { background-image: url(https://bobandsuewilliams.com/images/mercury-transparent-4.png);}
+#venus .planet { background-image: url(https://kunisan.jp/planets/venus.gif);}
+#earth .planet { background-image: url(http://www.stickpng.com/assets/images/580b585b2edbce24c47b2705.png);}
+#mars .planet { background-image: url(https://vignette.wikia.nocookie.net/central/images/0/0e/Mars_spacepedia.png/revision/latest?cb=20181104135213); }
+#jupiter .planet { background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Jupiter_%28transparent%29.png/604px-Jupiter_%28transparent%29.png); }
+#saturn .planet { background-image: url(https://newvitruvian.com/images/planeten-clipart-full-moon-4.png); }
+#uranus .planet { background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/16/Uranus2-transparent.png);}
+#neptune .planet { background-image: url(https://pics.clipartpng.com/midle/Neptune_PNG_Clip_Art-2158.png)}
+/*END */
+
+
+/* Responsive Additions */
+@media screen and (max-width: 4000px) { #universe {font-size: 40%;}
+/*END */
+
+
+/* Background Animation */
+@keyframes move-twink-back {                 
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;} 
+}
+  
+/*END */
+/* Planets animations */
+@keyframes path {
+  0% {transform: rotateZ(0deg); }
+  100% {transform: rotateZ(-360deg); }
+   }
+
+@keyframes rotate {
+  0% { transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg); }
+  100% { transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg); } 
+}
+/*END */
+
+/* Planets Shadow animations */
+@keyframes shadowMercury {
+  0% {box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5); /* TOP */ }
+  25% {box-shadow: inset 5px 0 2px rgba(0, 0, 0, 0.5); /* LEFT */ }
+  50% {box-shadow: inset 10px -5px 5px rgba(0, 0, 0, 0.5); /* BOTTOM */ }
+  75% {box-shadow: inset -5px 0 2px rgba(0, 0, 0, 0.5); /* RIGHT */ }
+  100% {box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5); /* TOP */ } 
+}
+
+@keyframes shadowVenus {
+  0% {box-shadow: inset 5px 0 2px rgba(0, 0, 0, 0.5); /* LEFT */ }
+  25% {box-shadow: inset 20px -20px 10px rgba(0, 0, 0, 0.5); /* BOTTOM */ }
+  25.5% {box-shadow: inset -20px -20px 10px rgba(0, 0, 0, 0.5); /* BOTTOM */ }
+  50% {box-shadow: inset -4px 0 2px rgba(0, 0, 0, 0.5); /* RIGHT */ }
+  75% {box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5); /* TOP */ }
+  100% {box-shadow: inset 5px 0 2px rgba(0, 0, 0, 0.5); /* LEFT */ } 
+}
+
+@keyframes shadowEarth {
+  0% {box-shadow: inset -5px 0 2px rgba(0, 0, 0, 0.5); /* RIGHT */ }
+  25% {box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5); /* TOP */ }
+  50% {box-shadow: inset 5px 0 2px rgba(0, 0, 0, 0.5); /* LEFT */ }
+  75% {box-shadow: inset 25px -20px 15px rgba(0, 0, 0, 0.5); /* BOTTOM */ }
+  100% {box-shadow: inset -5px 0 2px rgba(0, 0, 0, 0.5); /* RIGHT */ } 
+}
+
+@keyframes shadowMars {
+  0% {box-shadow: inset -20px -10px 10px rgba(0, 0, 0, 0.5); /* BOTTOM */ }
+  25% {box-shadow: inset -5px 0 2px rgba(0, 0, 0, 0.5); /* RIGHT */ }
+  50% {box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5); /* TOP */ }
+  75% {box-shadow: inset 5px 0 2px rgba(0, 0, 0, 0.5); /* LEFT */ }
+  100% {box-shadow: inset -20px -10px 10px rgba(0, 0, 0, 0.5); /* BOTTOM */ } 
+}
+
+@keyframes shadowJupiter {
+  0% {box-shadow: inset -15px 0 5px rgba(0, 0, 0, 0.5); /* RIGHT */ }
+  25% {box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.5); /* TOP */ }
+  50% {box-shadow: inset 16px 0 5px rgba(0, 0, 0, 0.5); /* LEFT */ }
+  75% {box-shadow: inset 100px -50px 50px rgba(0, 0, 0, 0.5); /* BOTTOM */ }
+  100% {box-shadow: inset -15px 0 5px rgba(0, 0, 0, 0.5); /* RIGHT */ } 
+}
+
+
+@keyframes shadowSaturn {
+  0% {box-shadow: inset 15px 0 5px rgba(0, 0, 0, 0.5); /* LEFT */ }
+  25% {box-shadow: inset 100px -50px 50px rgba(0, 0, 0, 0.5); /* BOTTOM */ }
+  50% {box-shadow: inset -15px 0 5px rgba(0, 0, 0, 0.5); /* RIGHT */ }
+  75% {box-shadow: inset -2px 3px 2px rgba(0, 0, 0, 0.5); /* TOP */ }
+  100% {box-shadow: inset 15px 0 5px rgba(0, 0, 0, 0.5);  /* LEFT */ } 
+}
+
+
+@keyframes shadowUranus {
+  0% {box-shadow: inset 10px 0 5px rgba(0, 0, 0, 0.5); /* LEFT */ }
+  25% {box-shadow: inset 50px -15px 50px rgba(0, 0, 0, 0.5);  /* BOTTOM */ }
+  50% {box-shadow: inset -10px 0 5px rgba(0, 0, 0, 0.5);  /* RIGHT */ }
+  75% {box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5);  /* TOP */ }
+  100% {box-shadow: inset 10px 0 5px rgba(0, 0, 0, 0.5); /* LEFT */ } 
+}
+
+@keyframes shadowNeptune {
+  0% {box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5); /* TOP */ }
+  25% {box-shadow: inset 12px 0 5px rgba(0, 0, 0, 0.5); /* LEFT */ }
+  50% {box-shadow: inset 50px -15px 50px rgba(0, 0, 0, 0.5); /* BOTTOM */ }
+  75% {box-shadow: inset -12px 0 5px rgba(0, 0, 0, 0.5); /* RIGHT */ }
+  100% {box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5); /* TOP */ } 
+}
+
+/*END */
+
+/* Credit LIST :
+
+CREDIT: Heavily "Inspired" by @juliangarnier Solar System https://github.com/juliangarnier
+http://www.independent-software.com/deconstructing-css-3-making-of-css3-solar-system-animation-3d-transformations.html
+https://www.script-tutorials.com/night-sky-with-twinkling-stars/
+https://css-tricks.com/molten-leading-css/
+https://subvisual.co/blog/posts/62-perfecting-a-css-3d-animation/
+@juliangarnier Solar System https://github.com/juliangarnier
+https://stackoverflow.com/questions/14233341/how-can-i-rotate-an-html-div-90-degrees
+https://www.w3schools.com/cssref/css3_pr_animation-timing-function.asp
+https://www.w3schools.com/css/css3_3dtransforms.asp
+https://www.w3schools.com/css/css_display_visibility.asp
+https://www.w3schools.com/css/css3_fonts.asp
+
+ */
