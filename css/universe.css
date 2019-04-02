@@ -95,10 +95,10 @@ span {transition: color 0.1s ease;}  /* Transtion From White to Red */
   z-index: -7;
 }      
 
-.stars {background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;}
+.stars {background:#000 url(https://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;}
 
 .twinkling{
-  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  background:transparent url(https://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
   animation:move-twink-back 200s linear infinite;
 }
 
@@ -435,7 +435,7 @@ Revolution of planets in earth days (from Wikipedia)
 /* Credit LIST :
 
 CREDIT: Heavily "Inspired" by @juliangarnier Solar System https://github.com/juliangarnier
-http://www.independent-software.com/deconstructing-css-3-making-of-css3-solar-system-animation-3d-transformations.html
+https://www.independent-software.com/deconstructing-css-3-making-of-css3-solar-system-animation-3d-transformations.html
 https://www.script-tutorials.com/night-sky-with-twinkling-stars/
 https://css-tricks.com/molten-leading-css/
 https://subvisual.co/blog/posts/62-perfecting-a-css-3d-animation/
