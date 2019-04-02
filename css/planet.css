@@ -72,9 +72,9 @@ span {transition: color 0.1s ease;}  /* Transtion From White to Red */
   height:100vh;        /* 100% of the Screen height*/
   z-index: -1;}       /* z-index */
 
-.stars {background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;}
+.stars {background:#000 url(https://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;}
 .twinkling{
-  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  background:transparent url(https://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
   animation:move-twink-back 200s linear infinite; }
 
 /* Box Around Text */
