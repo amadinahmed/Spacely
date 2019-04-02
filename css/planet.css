@@ -176,7 +176,7 @@ p {
   width: 200%;   /* Picture width */
   height: 100%;  /* Picture Height */
   animation: spin 30s linear alternate infinite; /* Simple Spin Animation of the planet */
-  background: url(http://drh2.img.digitalriver.com/DRHM/Storefront/Company/digiwis/images/product/detail/world32k.jpg); /* Map of the Earth */
+  background: url(https://drh2.img.digitalriver.com/DRHM/Storefront/Company/digiwis/images/product/detail/world32k.jpg); /* Map of the Earth */
   background-size: cover; } /* Fits the planet Map to the Circle */
 /* Mars.html Planet */
 .mars {
