@@ -3,15 +3,19 @@
 /* General Propeties */
 body
 {
-	margin: 0;
+	
 	padding: 0;
-	background: #000;
+	background: #262933;
 	font-family: lato;
-
+	overflow-x: hidden;
+  overflow-y: auto;
+  color: white; 
+  -webkit-overflow-scrolling:touch;
 }
+
 * { 
-  margin: 0px;  
-  padding: 0px; 
+	padding: 0px;
+	margin: 0px;
   box-sizing: border-box;}  
 
 a {  /* a tags */
@@ -39,7 +43,7 @@ a {  /* a tags */
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
 	background: url(../img/space.jpg);
 	background-size: cover;
@@ -49,10 +53,10 @@ a {  /* a tags */
 	align-items: center;
 
 }
+
 /* Defining the Header Text  */
 .header h2
 {
-
 	margin: 0;
 	padding:0;
 	font-size: 5em;
@@ -73,6 +77,30 @@ section
 	min-height: 100vh;
 	box-sizing: border-box;
 }
+
+.row {
+  width: 100%;
+  max-width: 940px;
+  margin: 0 auto;
+  position: relative;
+	padding: 0 2%;
+	padding: 50px 2% 250px;
+}
+
+
+h1 {
+  font-size: 30px;
+  line-height: 1.8;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 17px;
+  line-height: 2;
+}
+
 /* Properties for the Header Text  */
 section h2
 {
@@ -87,9 +115,35 @@ section p
 	color: #fff;
 	font-size: 1.3em;
 }
+
+
+.linemenu {
+  position: relative;
+  top: 2%;
+  left: 2%;
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  cursor: pointer;
+	margin-left: 50px;
+	z-index: 10;
+	
+}
+.Button {
+  position: relative;
+  display: block;
+	cursor: pointer;
+	z-index: 10;
+	margin-top: 40px;
+	margin-left: 33px;
+}
+
+
+
 /* Customizing the ScrollBar  */
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -109,49 +163,109 @@ section p
 
 
 /* Nav bar style */
-.menu {   /* Defining Bottom Nav Bar */
-  text-transform: uppercase;  /* Maded it Uppercase */
-  color: white;  /* color white */ 
-  position: absolute; /*Postion absolite */
-  bottom: 8%;  /* 8 % from the botom */
-  left: 12%;  /* 12% from the left side*/
+.menu { 
+  text-transform: uppercase; 
+  color: white;
+  position: absolute; 
+  bottom: 8%; 
+  left: 12%; 
   z-index: 100;
 
-  }  /* Z-index */
+  } 
 
 .menu:hover {
   opacity: 1; /* When u hover over Quick menu it will make the opacity full */
 }
 
-.label {  /* aka Quick menu*/
-  display: inline-block;  /* inline for the bottom plants */
-  cursor: pointer;  /* Changes to a hand Pointer to indicate clickable */
+.menu:hover .planet-names:nth-child(11) {opacity: 0.4;}
+
+.label {  
+  display: inline-block; 
+  cursor: pointer;  
 }
 
 .planet-names {
-  position: relative;   /* Postion relative to the screen */
-  display: inline-block;  /* The planet Names inline */
-  margin-right: 30px;  /*S paceing fom the right side */
-  top: 10px; /* Spacing from "quick menu" and the planet-names */
-  opacity: 0.4;  /* Allows it to be half Faded */
-  padding-top: 10px; /* Spacing  from the top */
-  padding-bottom: 20px; /* Spacomg from the bottom */
+  position: relative;   
+  display: inline-block; 
+  margin-right: 30px;  
+  top: 10px; 
+  opacity: 0.4;  
+  padding-top: 10px; 
+  padding-bottom: 20px; 
 }
 
-.pluto {  /* Becuase Pluto Is always there in our hearts */  
-  position: relative;   /* Postion relative to the screen */
-  display: inline-block;  /* The planet Names inline */
-  margin-right: 30px;  /*S paceing fom the right side */
-  top: 10px; /* Spacing from "quick menu" and the planet-names */
-  opacity: 0.4;  /* Allows it to be half Faded */
-  padding-top: 10px; /* Spacing  from the top */
-  padding-bottom: 20px; /* Spacomg from the bottom */
+.pluto { 
+  position: relative;  
+  display: inline-block; 
+  margin-right: 30px; 
+  top: 10px; 
+  opacity: 0.4; 
+  padding-top: 10px; 
+  padding-bottom: 20px; 
 }
 
-.menu:hover .planet-names:nth-child(11) {opacity: 0.4;}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(17, 17, 17,0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+	padding-top: 60px;
+	z-index: 11;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .close {
+  position: absolute;
+  top: 0;
+  right: 35px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
 
 /* Navbar Animation */
 span {transition: color 0.1s ease;}  /* Transtion From White to Red */
 
 .planet-names:hover span {color: #ff0000;}  /* When hover turns one planet-names Red*/
 .menu:hover .planet-names { opacity: 1; }  /*Opacity Full when Hovering over planet-names */
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+@media screen and (max-width: 1364px) {
+  .menu {display: none;}
+  .sidenav, .button {display:block;}
+}
+@media screen and (min-width: 1364px) {
+  .menu {display: block;}
+  .sidenav, .button, .linemenu {display:none;}
+}
+
+@media screen and (max-width: 1000px) {
+  .linemenu, .button{
+		margin-left: 20px;
+		
+   } 
+}
+
+
+

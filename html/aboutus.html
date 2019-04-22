@@ -1,20 +1,55 @@
 <!doctype html>
 <html>
+  
+  <head>
+    <!-- Importing Responsive Css Files and Fonts  -->
+    <title>Spacely/About-Us</title>
+    <link rel="shortcut icon" href=../img/img.ico type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' type='text/css' href='../css/aboutus.css' />
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|Cardo' rel='stylesheet' type='text/css'>
+    <script src="../js/main.js"></script>
+  </head>
 
-<head>
-	<title>Spacely/About-Us</title>
-  <link rel="shortcut icon" href=../img/img.ico type="image/png">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel='stylesheet' type='text/css' href='../css/aboutus.css' />
-	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>	
-</head>
-
-<body>
+  <body>
+    <!-- Side Nav Bar -->
+    <nav>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="close" onclick="closeNav()" style="font-size: 80px;" >&times;</a><!-- https://www.w3schools.com/  https://wesbos.com/times-html-entity-close-button/  -->
+          <br>
+          <br>
+          <a href="../index.html">⠀Spacely</a>
+          <br>
+          <a href="universe.html">⠀SolarSystem</a>
+          <a href="mercury.html">⠀Mercury</a>
+          <a href="venus.html">⠀Venus</a>
+          <a href="earth.html">⠀Earth</a>
+          <a href="mars.html">⠀Mars</a>
+          <a href="jupiter.html">⠀Jupiter</a>
+          <a href="saturn.html">⠀Saturn</a>
+          <a href="uranus.html">⠀Uranus</a>
+          <a href="neptune.html">⠀Neptune</a>
+          <a href="pluto.html">⠀Pluto</a>
+          <a style="color: turquoise;" href="aboutus.html">⠀About Us</a>
+        </div>
+        <div onclick="openNav()" class="Button">
+            <div onclick="openNav()" class="linemenu"></div>
+            <div onclick="openNav()" class="linemenu"></div>
+            <div onclick="openNav()" class="linemenu"></div>
+          </div>
+  </nav>
   <!-- Adding the Rocket -->
 	<div class="rocket">
-		<li class="layer"><img src="../img/rocket.gif"></li>
-	</div>
+    <li class="layer"><img src="../img/rocket.gif"></li>
+  </div>
+  <!-- Bottom Nav Bar -->
 	<div class="menu">
     <div class="label style"></div>
     <div class="spacer"></div>
@@ -86,46 +121,66 @@
 
 	<div class="header">
 		<h2>About Us</h2>
-	</div>
+  </div>
+  <!-- Gives Space to allow Scroll animation -->
 	<section>
-    <!-- Header Question -->
-		<h2>So why did we make Spacely?</h2>
-    <!-- Main Text -->
-	<p>
-		Created By: Amadin Ahmed / ShiHong Huang
-		<br>
-		<br>
-		<br>
-		<br>
-		Spacely is a website that helps people who are interested in the Solar System learn more about it. This website provides brief and images of each planet with more easier information for younger people, especially students, to understand instead of going onto more complex websites with harder and more complicated information about each planet. Spacely will provide everyone what they need to know outside their imagination. Not only does this website help students, but they also help teachers to provide information that they need when they are looking for a good and simple understanding of the Solar System as a class lesson. This creates a great alternative when gathering information about space instead of a boring textbook.
-		<br>
-		<br>
-		<br>
-	</p>
-		<h2>Who Are We?</h2>
-	<p>
-		<br>
-		Written by: ShiHong Huang
-		<br>
-		<br>
-		When I was at a young age, I didn’t know much about outer space until I saw on cartoon show about how the rocket launched into the spaces. I thought that was interesting and wondering what could there be outside the Earth. I started buying books about outer space also bought a telescope to try to see physical what’s out there. Then I started getting into space and how interesting it can be. 
-		<br>
-		<br>
-		<br>
-		Written by: Amadin Ahmed
-		<br>
-		<br>
-		During my early childhood, I was fascinated by the thought of the unknown. Staring into the night sky genuinely wondering what is what really is up there. Trying to find this information in 2007 was kinda difficult looking countless pdf articles about “how pluto is a planet” and stuff like that completely desensitized me from exploring the wonders about space. Yet this CNTRL-SHIFT competition kinda lit a flame inside me once again. Our goal on this website was to make it extremely user-friendly to satisfy these young minds.
-	</p>
-	</section>
-  <!-- Scroll to change opacity -->
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$(window).scroll(function(){
-				$('.header').css("opacity", 1 - $(window).scrollTop()/1200)
-			})
-		})
-		
-	</script>
-</body>
+  </section>
+  <!-- Creating the Multipe Text Box-->
+  <div class="row">
+      <br>
+      <br>
+        <h1 class="head">Inspiration</h1>
+        <br>
+        <p>During our early childhood, we were fascinated by the thought of the unknown. Staring into the night sky genuinely wondering what is what really is up there. Trying to find this information in 2007 was kinda difficult looking through countless pdf articles about “How Pluto is a planet?” and werid stuff like that completely desensitized us from exploring the wonders about our solar system. Yet this CTRL-SHIFT competition kinda lit a flame inside us of once again. Our goal on this website was to make it extremely user-friendly and mobile friendly to satisfy these young minds that are eager to learn what truly is in our solar system.</p>
+        <br>
+        <br>
+        <h1 class="head">Vision</h1>
+        <br>
+        <p>Our vision of Spacely was founded under the idea of that your in the cockpit of a space ship flying throughout the solar system. This idea derived from multiple drawing of the concept layout that comprised the website, this allowed us to explore web design whilst still sticking to our roots of what we wanted the website to be. After countless hours the website has turned into a state that we both truly love and are proud of.</p>
+        <br>
+        <h1 class="head">How did we create Spacely?</h1>
+        <br>
+        <p>The main page was created to immerse you into the thought process that you are going to explore the solar system. 
+    
+            The solar system page was created by creating a solar system than out of still images of planets and circle to simulate the orbit path in all in 2d. We would then allow the planets to follow the path from 0%-100% by rotating on the z-axis the orbit lines, and rotating the planet -90deg and whits rotating it on the Y-axis from 360deg to 0deg. As for the Shadows for the planet, we performed a simple box-shadow from 0%-100% with different box-shadow offsets.
+            
+            The planet pages were created with the idea of a simple and easy way of digesting the planet information. In contrast to the typical pdf report. The text box was created to have a blur effect to allow an increase in visibility and ascetics when reading the information on the starlit background. The spinning planet was created by having a square with a border radius, to then span a map of any planet; then simulating the Illusion of it spinning.
+            </p>
+        <h1 class="head">Credit List:</h1>
+        <br>
+        <p>
+            Credit:
+            http://www.independent-software.com/deconstructing-css-3-making-of-css3-solar-system-animation-3d-transformations.html(3D space transformations)
+            https://www.script-tutorials.com/night-sky-with-twinkling-stars/(Stars background)
+            https://css-tricks.com/molten-leading-css/(responsive text size)
+            https://subvisual.co/blog/posts/62-perfecting-a-css-3d-animation/(3d Cs animation)
+            @juliangarnier  https://github.com/juliangarnier(solarsystem concept)
+            https://stackoverflow.com/questions/14233341/how-can-i-rotate-an-html-div-90-degrees(Rotation of planets)
+            https://www.w3schools.com/cssref/css3_pr_animation-timing-function.asp(animation speeds)
+            https://www.w3schools.com/css/css3_3dtransforms.asp(transdormation)
+            https://www.w3schools.com/css/css_display_visibility.asp(Display)
+            https://www.w3schools.com/css/css3_fonts.asp(different fonts)
+            https://solarsystem.nasa.gov/planets/overview/(information for planets)
+            https://codepen.io/Jack-undo/pen/rQGzMw(Startup Animation)
+        </p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>By: Amadin Ahmed and ShiHong Huang</h1>
+    </div>
+    
+    <!-- Scroll to change opacity -->
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(window).scroll(function(){
+          $('.header, .menu').css("opacity", 1 - $(window).scrollTop()/700)
+        })
+      })
+      
+    </script>
+  </body>
 </html>
+
+
+  

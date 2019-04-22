@@ -1,59 +1,59 @@
 /* importing fonts */
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 @import url('https://fonts.googleapis.com/css?family=Lato');
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
 /* Setting the Background and Misc*/
+body{
+  background-color: black;
+}
 
 * { 
-  margin: 0px;  /* Margin  0 Allows me to remove the scroll by fiting everything on the screen */
-  padding: 0px; /* Padding 0  Allows me to remove the scroll by fiting everything on the screen */
-  box-sizing: border-box;}  /* Simply choosing the border-box makes it so the it will fit the parent container */
+  margin: 0px; 
+  padding: 0px; 
+  box-sizing: border-box;}
 
-a {  /* a tags */
-  color: transparent; /* Color transparent */
-  text-decoration: none;}  /* remove any text decoration*/
-
-
-
-
-
-
-
+a { 
+  color: transparent; 
+  text-decoration: none;} 
+  
 /* Nav bar style */
 .menu {   /* Defining Bottom Nav Bar */
-  text-transform: uppercase;  /* Maded it Uppercase */
-  color: white;  /* color white */ 
-  position: absolute; /*Postion absolite */
-  bottom: 8%;  /* 8 % from the botom */
-  left: 12%;  /* 12% from the left side*/
-  z-index: 100;}  /* Z-index */
+  text-transform: uppercase; 
+  color: white;  
+  position: absolute;
+  bottom: 8%;  
+  left: 12%;  
+  z-index: 100;} 
 
 .menu:hover {
   opacity: 1; /* When u hover over Quick menu it will make the opacity full */
 }
 
 .label {  /* aka Quick menu*/
-  display: inline-block;  /* inline for the bottom plants */
-  cursor: pointer;  /* Changes to a hand Pointer to indicate clickable */
+  display: inline-block; 
+  cursor: pointer;  
 }
 
 .planet-names {
-  position: relative;   /* Postion relative to the screen */
-  display: inline-block;  /* The planet Names inline */
-  margin-right: 30px;  /*S paceing fom the right side */
-  top: 10px; /* Spacing from "quick menu" and the planet-names */
-  opacity: 0.4;  /* Allows it to be half Faded */
-  padding-top: 10px; /* Spacing  from the top */
-  padding-bottom: 20px; /* Spacomg from the bottom */
+  position: relative;   
+  display: inline-block;  
+  margin-right: 30px; 
+  top: 10px; 
+  opacity: 0.4;  
+  padding-top: 10px; 
+  padding-bottom: 20px; 
 }
 
 .pluto {  /* Becuase Pluto Is always there in our hearts */  
-  position: relative;   /* Postion relative to the screen */
-  display: inline-block;  /* The planet Names inline */
-  margin-right: 30px;  /*S paceing fom the right side */
-  top: 10px; /* Spacing from "quick menu" and the planet-names */
-  opacity: 0.4;  /* Allows it to be half Faded */
-  padding-top: 10px; /* Spacing  from the top */
-  padding-bottom: 20px; /* Spacomg from the bottom */
+  position: relative;   
+  display: inline-block; 
+  margin-right: 30px;  
+  top: 10px; 
+  opacity: 0.4;  
+  padding-top: 10px; 
+  padding-bottom: 20px; 
 }
 
 .menu:hover .planet-names:nth-child(11) {opacity: 0.4;}
@@ -67,14 +67,14 @@ span {transition: color 0.1s ease;}  /* Transtion From White to Red */
 
 /* Background */
 .stars, .twinkling{   /* Credit : https://www.script-tutorials.com/night-sky-with-twinkling-stars/ */
-  position:absolute;  /* */
-  width:100%;         /* 100% of the Screen Width */
-  height:100vh;        /* 100% of the Screen height*/
-  z-index: -1;}       /* z-index */
+  position: fixed; 
+  width:100%;        
+  height:100000ch;       
+  z-index: -1;}  
 
-.stars {background:#000 url(https://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;}
+.stars {background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;}
 .twinkling{
-  background:transparent url(https://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
   animation:move-twink-back 200s linear infinite; }
 
 /* Box Around Text */
@@ -96,6 +96,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .box:after
@@ -111,338 +112,369 @@ body {
 }
 .box:before, .box:after
 {
-  background: linear-gradient(235deg,#89ff00,transparent,#00bcd4);
+  background: linear-gradient(235deg,	#2F4F4F,transparent,#778899);
   z-index: 1;
 }
 
 .content
 {
-  padding: 20px;
-  box-sizing: border-box;
-  color: white;
-  z-index: 5;
+ width: 40vh;
+ height: 50vh;
+ z-index: 2;
+ color: white;}
+
+/* Creating Side Nav Bar   */
+ .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(17, 17, 17,0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 100000;
 }
 
-
-
-/* Header Text */
-h1{
-  font-size: calc(1em + 1vw); /* Credit : https://css-tricks.com/molten-leading-css/ */
-  padding-bottom: 5px;  /* Padding Between Text */
-  color:white;  /* White color */
-  font-weight: 1; } /* How thick the font  */
-
-/* Text Descriptions */
-h2{
-  color:white;  /* Color White  */
-  font-weight:1; }  /* How thick the font  */
-a{
-  color: white;
-  font-weight:1;
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
-h2 {font-size: calc(1em + 1vw);}  /* Credit : https://css-tricks.com/molten-leading-css/ */
-/* Text */
-p { 
-  margin: 16px;/* Spaceing  */
-  color:white; } /* color white */
 
+.sidenav a:hover {
+  color: #f1f1f1;
+}
 
-/* Earth.html Planet */
+.sidenav .close {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+/* Creating hamburger Icon   */
+.linemenu {
+  position: relative;
+  top: 2%;
+  left: 2%;
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  cursor: pointer;
+  margin-left: 50px;
+}
+.Button {
+  position: absolute;
+  display: block;
+  top: 4.2%;
+  left: 0%;
+  cursor: pointer;
+}
+
+/* Earth.html Planet   */
 .earth {
-  width: 450px;/* Width For the Planet */
-  height: 450px; /*Height for the Planet*/
-  position: fixed; /* Created a Fixed Postion so no movement from Parent Div */
+  width: 450px;
+  height: 450px; 
+  position: fixed;
   top: 0; 
   bottom: 0;
   left: 50%; 
   right: 0;
-  margin: auto;  /* Makes all marins auto to postion left 50% */
-  overflow: hidden;  /* Hides the Extra Part of the Earth */
+  margin: auto;  
+  overflow: hidden;  
   border-radius: 50%; /* Created the Circle */
-} /* Made a Block Element*/
+} 
 
 .earth:after { /* after the earths animation */
   position: absolute;
-  content: ""; /* By having content "" Which whould be the picture it allows me to actual Shadow the planet */
-  top: 0;     /* giving 0 to Define the actual location to then shadow it*/
-  bottom: 0;  /* giving 0 to Define the actual location to then shadow it*/
-  left: 0;    /* giving 0 to Define the actual location to then shadow it*/
-  right: 0;   /* giving 0 to Define the actual location to then shadow it*/
+  content: ""; 
+  top: 0;     
+  bottom: 0;  
+  left: 0;    
+  right: 0;   
   box-shadow: -20px -20px 50px 2px #000 inset;  /* Shadow Around Planet Credit: https://www.w3schools.com/cssref/css3_pr_box-shadow.asp */
-  border-radius: 50%; /* Keeps the same Circle Property */
+  border-radius: 50%; 
 }
 
 .earth > div {
-  width: 200%;   /* Picture width */
-  height: 100%;  /* Picture Height */
+  width: 200%;  
+  height: 100%; 
   animation: spin 30s linear alternate infinite; /* Simple Spin Animation of the planet */
-  background: url(https://drh2.img.digitalriver.com/DRHM/Storefront/Company/digiwis/images/product/detail/world32k.jpg); /* Map of the Earth */
-  background-size: cover; } /* Fits the planet Map to the Circle */
+  background: url(http://drh2.img.digitalriver.com/DRHM/Storefront/Company/digiwis/images/product/detail/world32k.jpg); /* Map of the Earth */
+  background-size: cover; } 
 /* Mars.html Planet */
 .mars {
-  width: 450px;/* Width For the Planet */
-  height: 450px; /*Height for the Planet*/
-  position: fixed; /* Created a Fixed Postion so no movement from Parent Div */
+  width: 450px;
+  height: 450px; 
+  position: fixed; 
   top: 0; 
   bottom: 0;
   left: 50%; 
   right: 0;
-  margin: auto;  /* Makes all marins auto to postion left 50% */
-  overflow: hidden;  /* Hides the Extra Part of the Earth */
-  border-radius: 50%; /* Created the Circle */
-} /* Made a Block Element*/
+  margin: auto;  
+  overflow: hidden; 
+  border-radius: 50%;
+}
 
 .mars:after { /* after the earths animation */
   position: absolute;
   content: ""; /* By having content "" Which whould be the picture it allows me to actual Shadow the planet */
-  top: 0;     /* giving 0 to Define the actual location to then shadow it*/
-  bottom: 0;  /* giving 0 to Define the actual location to then shadow it*/
-  left: 0;    /* giving 0 to Define the actual location to then shadow it*/
-  right: 0;   /* giving 0 to Define the actual location to then shadow it*/
+  top: 0;     
+  bottom: 0;  
+  left: 0;    
+  right: 0;   
   box-shadow: -20px -20px 50px 2px #000 inset;  /* Shadow Around Planet Credit: https://www.w3schools.com/cssref/css3_pr_box-shadow.asp */
-  border-radius: 50%; /* Keeps the same Circle Property */
+  border-radius: 50%; 
 }
 
 .mars > div {
-  width: 200%;   /* Picture width */
-  height: 100%;  /* Picture Height */
+  width: 200%;  
+  height: 100%;  
   animation: spin 30s linear alternate infinite; /* Simple Spin Animation of the planet Spins for 30s forever */
   background: url(https://astrogeology.usgs.gov/cache/images/c083f139458b86d88d2c6a2184261be3_Mars_Viking_ClrMosaic_global_1024.jpg);
-  background-size: cover; } /* Fits the planet Map to the Circle */
+  background-size: cover; } 
 /* Saturn.html Planet */
 .saturn {
-  width: 450px;/* Width For the Planet */
-  height: 450px; /*Height for the Planet*/
-  position: fixed; /* Created a Fixed Postion so no movement from Parent Div */
+  width: 450px;
+  height: 450px; 
+  position: fixed; 
   top: 0; 
   bottom: 0;
   left: 50%; 
   right: 0;
-  margin: auto;  /* Makes all marins auto to postion left 50% */
-  overflow: hidden;  /* Hides the Extra Part of the Earth */
-  border-radius: 50%; /* Created the Circle */
+  margin: auto;  
+  overflow: hidden; 
+  border-radius: 50%; 
  
-} /* Made a Block Element*/
+} 
 
-.saturn:after { /* after the earths animation */
+.saturn:after { 
   position: absolute;
-  content: ""; /* By having content "" Which whould be the picture it allows me to actual Shadow the planet */
-  top: 0;     /* giving 0 to Define the actual location to then shadow it*/
-  bottom: 0;  /* giving 0 to Define the actual location to then shadow it*/
-  left: 0;    /* giving 0 to Define the actual location to then shadow it*/
-  right: 0;   /* giving 0 to Define the actual location to then shadow it*/
+  content: ""; 
+  top: 0;     
+  bottom: 0;  
+  left: 0;    
+  right: 0;   
   box-shadow: -20px -20px 50px 2px #000 inset;  /* Shadow Around Planet Credit: https://www.w3schools.com/cssref/css3_pr_box-shadow.asp */
-  border-radius: 50%; /* Keeps the same Circle Property */
+  border-radius: 50%; 
  
 }
 
 .saturn > div {
-  width: 200%;   /* Picture width */
-  height: 100%;  /* Picture Height */
+  width: 200%;  
+  height: 100%;  
 
-  animation: spin 30s linear alternate infinite; /* Simple Spin Animation of the planet Spins for 30s forever */
+  animation: spin 30s linear alternate infinite; 
   background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/5938ae9e-47de-424a-8836-f98e6658d37b/dc7weok-ac20c1ef-c812-4b67-9564-a63ce0e453c5.png/v1/fill/w_1264,h_632,q_70,strp/saturn_2011_texture_map_by_askaniy_dc7weok-pre.jpg);
   background-size: cover;
-  } /* Fits the planet Map to the Circle */
-/* Mercury.html Planet */
+  }
+
 .mercury {
-  width: 450px;/* Width For the Planet */
-  height: 450px; /*Height for the Planet*/
-  position: fixed; /* Created a Fixed Postion so no movement from Parent Div */
+  width: 450px;
+  height: 450px; 
+  position: fixed; 
   top: 0; 
   bottom: 0;
   left: 50%; 
   right: 0;
-  margin: auto;  /* Makes all marins auto to postion left 50% */
-  overflow: hidden;  /* Hides the Extra Part of the Earth */
-  border-radius: 50%; /* Created the Circle */
-} /* Made a Block Element*/
+  margin: auto; 
+  overflow: hidden; 
+  border-radius: 50%;
+} 
 
-.mercury:after { /* after the earths animation */
+.mercury:after { 
   position: absolute;
-  content: ""; /* By having content "" Which whould be the picture it allows me to actual Shadow the planet */
-  top: 0;     /* giving 0 to Define the actual location to then shadow it*/
-  bottom: 0;  /* giving 0 to Define the actual location to then shadow it*/
-  left: 0;    /* giving 0 to Define the actual location to then shadow it*/
-  right: 0;   /* giving 0 to Define the actual location to then shadow it*/
+  content: ""; 
+  top: 0;     
+  bottom: 0;  
+  left: 0;    
+  right: 0;   
   box-shadow: -20px -20px 50px 2px #000 inset;  /* Shadow Around Planet Credit: https://www.w3schools.com/cssref/css3_pr_box-shadow.asp */
-  border-radius: 50%; /* Keeps the same Circle Property */
+  border-radius: 50%; 
 }
 
 .mercury > div {
-  width: 200%;   /* Picture width */
-  height: 100%;  /* Picture Height Btw Mercury's height is higher to prevent croping from the img */
-  animation: spin 30s linear alternate infinite; /* Simple Spin Animation of the planet Spins for 30s forever */
+  width: 200%;   
+  height: 100%;  
+  animation: spin 30s linear alternate infinite;
   background: url(https://astrogeology.usgs.gov/cache/images/e24fd57a476db72202527a9e8a280dda_Mercury_MESSENGER_MDIS_Basemap_LOI_Mosaic_Global_1024.jpg);
-  background-size: cover;} /* Fits the planet Map to the Circle */
+  background-size: cover;} 
 /* Jupiter.html Planet */
 .jupiter {
-  width: 450px;/* Width For the Planet */
-  height: 450px; /*Height for the Planet*/
-  position: fixed; /* Created a Fixed Postion so no movement from Parent Div */
+  width: 450px;
+  height: 450px; 
+  position: fixed;
   top: 0; 
   bottom: 0;
   left: 50%; 
   right: 0;
-  margin: auto;  /* Makes all marins auto to postion left 50% */
-  overflow: hidden;  /* Hides the Extra Part of the Earth */
-  border-radius: 50%; /* Created the Circle */
-} /* Made a Block Element*/
+  margin: auto;  
+  overflow: hidden;  
+  border-radius: 50%; 
+} 
 
-.jupiter:after { /* after the earths animation */
+.jupiter:after { 
   position: absolute;
-  content: ""; /* By having content "" Which whould be the picture it allows me to actual Shadow the planet */
-  top: 0;     /* giving 0 to Define the actual location to then shadow it*/
-  bottom: 0;  /* giving 0 to Define the actual location to then shadow it*/
-  left: 0;    /* giving 0 to Define the actual location to then shadow it*/
-  right: 0;   /* giving 0 to Define the actual location to then shadow it*/
+  content: "";
+  top: 0;     
+  bottom: 0;  
+  left: 0;    
+  right: 0;   
   box-shadow: -20px -20px 50px 2px #000 inset;  /* Shadow Around Planet Credit: https://www.w3schools.com/cssref/css3_pr_box-shadow.asp */
-  border-radius: 50%; /* Keeps the same Circle Property */
+  border-radius: 50%; 
 }
 
 .jupiter > div {
-  width: 200%;   /* Picture width */
-  height: 100%;  /* Picture Height */
-  animation: spin 30s linear alternate infinite; /* Simple Spin Animation of the planet Spins for 30s forever */
+  width: 200%;   
+  height: 100%;  
+  animation: spin 30s linear alternate infinite; 
   background: url(https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA19643_hires.jpg);
-  background-size: cover;} /* Fits the planet Map to the Circle */
+  background-size: cover;}
 /* Venus.html Planet */
 .venus {
-  width: 450px;/* Width For the Planet */
-  height: 450px; /*Height for the Planet*/
-  position: fixed; /* Created a Fixed Postion so no movement from Parent Div */
+  width: 450px;
+  height: 450px; 
+  position: fixed; 
   top: 0; 
   bottom: 0;
   left: 50%; 
   right: 0;
-  margin: auto;  /* Makes all marins auto to postion left 50% */
-  overflow: hidden;  /* Hides the Extra Part of the Earth */
-  border-radius: 50%; /* Created the Circle */
-} /* Made a Block Element*/
+  margin: auto; 
+  overflow: hidden; 
+  border-radius: 50%; 
+} 
 
-.venus:after { /* after the earths animation */
+.venus:after { 
   position: absolute;
-  content: ""; /* By having content "" Which whould be the picture it allows me to actual Shadow the planet */
-  top: 0;     /* giving 0 to Define the actual location to then shadow it*/
-  bottom: 0;  /* giving 0 to Define the actual location to then shadow it*/
-  left: 0;    /* giving 0 to Define the actual location to then shadow it*/
-  right: 0;   /* giving 0 to Define the actual location to then shadow it*/
+  content: ""; 
+  top: 0;     
+  bottom: 0;  
+  left: 0;    
+  right: 0;   
   box-shadow: -20px -20px 50px 2px #000 inset;  /* Shadow Around Planet Credit: https://www.w3schools.com/cssref/css3_pr_box-shadow.asp */
-  border-radius: 50%; /* Keeps the same Circle Property */
+  border-radius: 50%; 
 }
 
 .venus > div {
-  width: 200%;   /* Picture width */
-  height: 100%;  /* Picture Height */
-  animation: spin 30s linear alternate infinite; /* Simple Spin Animation of the planet Spins for 30s forever */
+  width: 200%;   
+  height: 100%;  
+  animation: spin 30s linear alternate infinite; 
   background: url(http://www.astrosurf.com/toussaint/dossiers/ssolaire/03venus/03venussph/03venusatsph04.jpg);
-  background-size: cover; } /* Fits the planet Map to the Circle */
+  background-size: cover; }
 /* Uranus.html Planet */
 .uranus {
-  width: 450px;/* Width For the Planet */
-  height: 450px; /*Height for the Planet*/
-  position: fixed; /* Created a Fixed Postion so no movement from Parent Div */
+  width: 450px;
+  height: 450px; 
+  position: fixed; 
   top: 0; 
   bottom: 0;
   left: 50%; 
   right: 0;
-  margin: auto;  /* Makes all marins auto to postion left 50% */
-  overflow: hidden;  /* Hides the Extra Part of the Earth */
-  border-radius: 50%; /* Created the Circle */
-} /* Made a Block Element*/
+  margin: auto;  
+  overflow: hidden;  
+  border-radius: 50%; 
+} 
 
-.uranus:after { /* after the earths animation */
+.uranus:after { 
   position: absolute;
-  content: ""; /* By having content "" Which whould be the picture it allows me to actual Shadow the planet */
-  top: 0;     /* giving 0 to Define the actual location to then shadow it*/
-  bottom: 0;  /* giving 0 to Define the actual location to then shadow it*/
-  left: 0;    /* giving 0 to Define the actual location to then shadow it*/
-  right: 0;   /* giving 0 to Define the actual location to then shadow it*/
+  content: ""; 
+  top: 0;     
+  bottom: 0;  
+  left: 0;    
+  right: 0;   
   box-shadow: -20px -20px 50px 2px #000 inset;  /* Shadow Around Planet Credit: https://www.w3schools.com/cssref/css3_pr_box-shadow.asp */
-  border-radius: 50%; /* Keeps the same Circle Property */
+  border-radius: 50%; 
 }
 /* */
 .uranus > div {
-  width: 200%;   /* Picture width */
-  height: 100%;  /* Picture Height */
-  animation: spin 30s linear alternate infinite; /* Simple Spin Animation of the planet Spins for 30s forever */
+  width: 200%;  
+  height: 100%; 
+  animation: spin 30s linear alternate infinite;
   background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/90ad8232-4e09-4675-b9e7-bc2898960870/dc0ss0c-aa6fd748-5785-41ec-9b6e-00356bf444c7.png/v1/fill/w_1024,h_512,q_80,strp/uranus_texture_map_by_jcpag2010_dc0ss0c-fullview.jpg);
-  background-size: cover; } /* Fits the planet Map to the Circle */
+  background-size: cover; }
 /* Neptune.html Planet */
 .neptune {
-  width: 450px;/* Width For the Planet */
-  height: 450px; /*Height for the Planet*/
-  position: fixed; /* Created a Fixed Postion so no movement from Parent Div */
+  width: 450px;
+  height: 450px; 
+  position: fixed; 
   top: 0; 
   bottom: 0;
   left: 50%; 
   right: 0;
-  margin: auto;  /* Makes all marins auto to postion left 50% */
-  overflow: hidden;  /* Hides the Extra Part of the Earth */
-  border-radius: 50%; /* Created the Circle */
-} /* Made a Block Element*/
+  margin: auto;  
+  overflow: hidden; 
+  border-radius: 50%; 
+} 
 
-.neptune:after { /* after the earths animation */
+.neptune:after { 
   position: absolute;
-  content: ""; /* By having content "" Which whould be the picture it allows me to actual Shadow the planet */
-  top: 0;     /* giving 0 to Define the actual location to then shadow it*/
-  bottom: 0;  /* giving 0 to Define the actual location to then shadow it*/
-  left: 0;    /* giving 0 to Define the actual location to then shadow it*/
-  right: 0;   /* giving 0 to Define the actual location to then shadow it*/
+  content: ""; 
+  top: 0;     
+  bottom: 0;  
+  left: 0;    
+  right: 0;   
   box-shadow: -20px -20px 50px 2px #000 inset;  /* Shadow Around Planet Credit: https://www.w3schools.com/cssref/css3_pr_box-shadow.asp */
-  border-radius: 50%; /* Keeps the same Circle Property */
+  border-radius: 50%;
 }
 
 .neptune > div {
-  width: 200%;   /* Picture width */
-  height: 100%;  /* Picture Height */
-  animation: spin 30s linear alternate infinite; /* Simple Spin Animation of the planet Spins for 30s forever */
+  width: 200%;   
+  height: 100%;  
+  animation: spin 30s linear alternate infinite; 
   background: url(https://bjj.mmedia.is/data/neptune/neptune.jpg);
-  background-size: cover; } /* Fits the planet Map to the Circle */
+  background-size: cover; } 
 
+  /* Created Saturn's Ring */
 .ovalfirstlayer {
-  width: 550px;/* Width For the Planet */
-  height: 550px; /*Height for the Planet*/
-  position: fixed; /* Created a Fixed Postion so no movement from Parent Div */
+  width: 550px;
+  height: 550px; 
+  position: fixed; 
   top: 0; 
   bottom: 0;
   left: 50%; 
   right: 0;
-  margin: auto;  /* Makes all marins auto to postion left 50% */
-   /* Hides the Extra Part of the Earth */
-  border-radius: 50%; /* Created the Circle */
+  margin: auto;  
+  
+  border-radius: 50%; 
   border: 2.6em solid rgb(160,82,45,0.2);
   transform-style: preserve-3d;
   transform: rotateX(82deg);
 }
 
 .ovalsecondlayer {
-  width: 635px;/* Width For the Planet */
-  height: 635px; /*Height for the Planet*/
-  position: fixed; /* Created a Fixed Postion so no movement from Parent Div */
+  width: 635px;
+  height: 635px; 
+  position: fixed;
   top: 0; 
   bottom: 0;
   left: 50%; 
   right: 0;
-  margin: auto;  /* Makes all marins auto to postion left 50% */
-   z-index: 13; /* Hides the Extra Part of the Earth */
-  border-radius: 50%; /* Created the Circle */
+  margin: auto;  
+   z-index: 13; 
+  border-radius: 50%; 
   border: 2.6em solid rgb(160,82,45,0.2);
   transform-style: preserve-3d;
   transform: rotateX(82deg);
 }
 
 .ovalthirdlayer {
-  width: 785px;/* Width For the Planet */
-  height: 785px; /*Height for the Planet*/
-  position: fixed; /* Created a Fixed Postion so no movement from Parent Div */
+  width: 785px;
+  height: 785px; 
+  position: fixed; 
   top: 0; 
   bottom: 0;
   left: 50%; 
   right: 0;
-  margin: auto;  /* Makes all marins auto to postion left 50% */
-   z-index: 13; /* Hides the Extra Part of the Earth */
-  border-radius: 50%; /* Created the Circle */
+  margin: auto; 
+   z-index: 13; 
+  border-radius: 50%;
   border: 2.6em solid rgb(139,69,19,0.1);
   transform-style: preserve-3d;
   transform: rotateX(82deg);
@@ -476,11 +508,28 @@ p {
     .box {
       left: 0px;
     } }
-
-
-
 @media (max-width: 700px) {  /* 700px and under will result in the  */
     .menu {
       font-size: 50%;
       bottom:3%;
     } }
+
+@media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+    
+@media screen and (max-width: 1364px) {
+      .menu {display: none;}
+      .sidenav, .button {display:block;}
+    }
+@media screen and (min-width: 1364px) {
+      .menu {display: block;}
+      .sidenav, .button, .linemenu {display:none;}
+    }
+    
+@media screen and (max-width: 1000px) {
+      .linemenu, .button{
+        margin-left: 20px;
+    } 
+  }

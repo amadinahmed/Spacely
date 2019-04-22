@@ -1,47 +1,76 @@
 <!doctype html>
+<html>
   <head>
 
-    <!-- Importing Responsive Css Files and Fonts  -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="stylesheet" href="../css/planet.css">
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'> 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+   <!-- Importing Responsive Css Files and Fonts  -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" href="../css/planet.css">
+  <script src="../js/main.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
- <!-- Title Bar  --> 
+  <!-- Title Bar  --> 
 
-<link rel="shortcut icon" href=../img/img.ico type="image/png">
-<title>Spacely/Uranus</title>
-  </head>
-
-<body>
-  <!-- Planet Div  -->
-  <div class="uranus" >
-    <div></div>
-  </div>
-  <!-- Text Box  -->
-  <div class="box">
-    <div class="content">
-      <h1>Planet Uranus</h1>
-      <h2>Information From :<a href="https://www.nasa.gov/"> NASA</a></h2>
-      <p>_______________________________</p>
-      <p>
-        Uranus, a lifeless planet, is made of water, methane, and ammonia fluids above a small rocky center. Like Jupiter and Saturn, its atmosphere is made of hydrogen and helium but it also has methane. The methane makes Uranus appear to be blue. Uranus has a total of 27 moons and has faint rings. The inner rings are narrow and dark while the outer rings are brightly colored and easier to see. Like Venus, Uranus rotates in the opposite direction from most planets and unlike any other planet, Uranus rotates on its side. Its unique rotation creates the planet’s unique seasons. Uranus experiences 21 years of nighttime in the winter, 21 years of daytime in the summer, and 42 years of both daytime and nighttime in the spring and fall. 
-        <br>
-        <br>
-        30,687 Earth Days
-        <br>
-        Estimation of 1,929,130,900 miles from Sun
-      </p>  
+  <link rel="shortcut icon" href=../img/img.ico type="image/png">
+  <title>Spacely/Uranus</title>
+    </head>
+    <!-- Side Nav Bar  -->
+  <nav>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="close" onclick="closeNav()" style="font-size: 80px;" >&times;</a><!-- https://www.w3schools.com/  https://wesbos.com/times-html-entity-close-button/  -->
+          <br>
+          <br>
+          <a href="../index.html">⠀Spacely</a>
+          <br>
+          <a href="universe.html">⠀SolarSystem</a>
+          <a href="mercury.html">⠀Mercury</a>
+          <a href="venus.html">⠀Venus</a>
+          <a href="earth.html">⠀Earth</a>
+          <a href="mars.html">⠀Mars</a>
+          <a href="jupiter.html">⠀Jupiter</a>
+          <a href="saturn.html">⠀Saturn</a>
+          <a style="color: turquoise;" href="uranus.html">⠀Uranus</a>
+          <a href="neptune.html">⠀Neptune</a>
+          <a href="pluto.html">⠀Pluto</a>
+          <a href="#">⠀News</a>
+          <a href="aboutus.html">⠀About Us</a>
+        </div>
+        <div onclick="openNav()" class="Button">
+            <div onclick="openNav()" class="linemenu"></div>
+            <div onclick="openNav()" class="linemenu"></div>
+            <div onclick="openNav()" class="linemenu"></div>
+          </div>
+  </nav>
+  <body>
+    <!-- Planet Div  -->
+    <div class="uranus" >
+      <div></div>
     </div>
-  </div>
-<!-- Background  -->
-  <div class="stars"></div>
-  <div class="twinkling"></div>
-  <div class="menu">
+    <!-- Text Box  -->
+    <div class="box">
+      <div class="content">
+        <h1>Planet Uranus</h1>
+        <h2>Information From :<a href="https://www.nasa.gov/"> NASA</a></h2>
+        <p>_______________________________</p>
+        <p>
+          Uranus, a lifeless planet, is made of water, methane, and ammonia fluids above a small rocky center. Like Jupiter and Saturn, its atmosphere is made of hydrogen and helium but it also has methane. The methane makes Uranus appear to be blue. Uranus has a total of 27 moons and has faint rings. The inner rings are narrow and dark while the outer rings are brightly colored and easier to see. Like Venus, Uranus rotates in the opposite direction from most planets and unlike any other planet, Uranus rotates on its side. Its unique rotation creates the planet’s unique seasons. Uranus experiences 21 years of nighttime in the winter, 21 years of daytime in the summer, and 42 years of both daytime and nighttime in the spring and fall. 
+          <br>
+          <br>
+          30,687 Earth Days
+          <br>
+          Estimation of 1,929,130,900 miles from Sun
+        </p>  
+      </div>
+    </div>
+  <!--  Star Background  -->
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <!-- Bottom nav bar  -->
+    <div class="menu">
     <div class="label style"></div>
     <div class="spacer"></div>
     <a style="color: white;" href="../index.html">
@@ -103,5 +132,6 @@
       <div class="planet-names">
         <span>About Us</span>
       </div>
-  </div>
-</body>
+    </div>
+  </body>
+</html>

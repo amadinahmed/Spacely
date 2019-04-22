@@ -18,155 +18,119 @@
     <!-- Loading Css -->
 
     <link rel="stylesheet" type="text/css" media="screen" href="../css/universe.css">
+    <script src="../js/main.js"></script>
 
 
-<!-- Creating Bottom Nav Bar -->
+  <!-- Creating Bottom Nav Bar -->
 
-<div class="menu">
-  <div class="label">
+  <nav>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="close" onclick="closeNav()" style="font-size: 80px;" >&times;</a><!-- https://www.w3schools.com/  https://wesbos.com/times-html-entity-close-button/  -->
+        <br>
+        <br>
+        <a href="../index.html">⠀Spacely</a>
+        <br>
+        <a style="color: turquoise;" href="universe.html">⠀SolarSystem</a>
+        <a href="mercury.html">⠀Mercury</a>
+        <a href="venus.html">⠀Venus</a>
+        <a href="earth.html">⠀Earth</a>
+        <a href="mars.html">⠀Mars</a>
+        <a href="jupiter.html">⠀Jupiter</a>
+        <a href="saturn.html">⠀Saturn</a>
+        <a href="uranus.html">⠀Uranus</a>
+        <a href="neptune.html">⠀Neptune</a>
+        <a href="pluto.html">⠀Pluto</a>
+        <a href="#">⠀News</a>
+        <a href="aboutus.html">⠀About Us</a>
+      </div>
+      <div style="color: transparent;" onclick="openNav()" class="Button"><div style="background-color: transparent;" onclick="openNav()" class="linemenu"></div></div>
+      <div style="padding-top: 3%;" onclick="openNav()" id="Button" class="Button">
+          <div onclick="openNav()" id="linemenu" class="linemenu"></div>
+          <div onclick="openNav()" id="linemenu" class="linemenu"></div>
+          <div onclick="openNav()" id="linemenu" class="linemenu"></div>
+        </div>
+  </nav>
+
+  </head>
+  <!-- Bottom Nav Bar  -->
+  <div class="menu">
+    <div class="label"></div>
+    <div class="spacer"></div>
+    <a style="color: white;" href="../index.html"><div class="planet-names"><span>Start</span></div></a>
+    <a style="color: turquoise;" href="universe.html"><div class="planet-names"><span>Solar System</span></div></a>
+    <a style="color: white;" href="mercury.html"><div class="planet-names"><span>Mercury</span></div></a>
+    <a style="color: white;" href="venus.html"><div class="planet-names"><span>Venus</span></div></a>
+    <a style="color: white;" href="earth.html"><div class="planet-names"><span>Earth</span></div></a>
+    <a style="color: white;" href="mars.html"><div class="planet-names"><span>Mars</span></div></a>
+    <a style="color: white;" href="jupiter.html"><div class="planet-names"><span>Jupiter</span></div></a>
+    <a style="color: white;" href="saturn.html"><div class="planet-names"><span>Saturn</span></div></a>
+    <a style="color: white;" href="uranus.html"><div class="planet-names"><span>Uranus</span></div></a>
+    <a style="color: white;" href="neptune.html"><div class="planet-names"><span>Neptune</span></div></a>
+    <a style="color: white;" href="pluto.html"><div class="pluto"><span>Pluto</span></div></a>
+    <a style="color: white;" href="aboutus.html"><div class="planet-names"><span>About Us</span></div></a>
   </div>
-  <div class="spacer">
-  </div>
-  <a style="color: white;" href="../index.html">
-    <div class="planet-names">
-      <span>Start</span>
-    </div>
-  </a>
-  <a style="color: turquoise;" href="universe.html">
-    <div class="planet-names">
-      <span>Solar System</span>
-    </div>
-  </a>
-  <a style="color: white;" href="mercury.html">
-    <div class="planet-names">
-      <span>Mercury</span>
-    </div>
-  </a>
-  <a style="color: white;" href="venus.html">
-    <div class="planet-names">
-      <span>Venus</span>
-    </div>
-  </a>
-  <a style="color: white;" href="earth.html">
-    <div class="planet-names">
-      <span>Earth</span>
-    </div>
-  </a>
-  <a style="color: white;" href="mars.html">
-    <div class="planet-names">
-      <span>Mars</span>
-    </div>
-  </a>
-  <a style="color: white;" href="jupiter.html">
-    <div class="planet-names">
-      <span>Jupiter</span>
-    </div>
-  </a>
-  <a style="color: white;" href="saturn.html">
-    <div class="planet-names">
-      <span>Saturn</span>
-    </div>
-  </a>
-  <a style="color: white;" href="uranus.html">
-    <div class="planet-names">
-      <span>Uranus</span>
-    </div>
-  </a>
-  <a style="color: white;" href="neptune.html">
-    <div class="planet-names">
-      <span>Neptune</span>
-    </div>
-  </a>
-  <a style="color: white;" href="pluto.html">
-    <div class="pluto">
-      <span>Pluto</span>
-    </div>
-  </a>
-  <a style="color: white;" href="aboutus.html">
-    <div class="planet-names">
-      <span>About Us</span>
-    </div>
-  </a>
-</div>
-<!-- Creating The Star Background -->
-  <div class="stars">
-    </div>
-  <div class="twinkling">
-    </div>
+  <!-- Background  -->
+    <div onclick="closeNav()" class="stars"></div>
+    <div onclick="closeNav()" class="twinkling"></div>
 
 
-<!-- Creating Solar System -->
-<body class="view-3D fit">
-  <!-- Defineing the Universe Div -->
-   <div id="universe" class="size">
-        <div id="solar-system" class="earth">
-          <!-- Creating mercury and adding its postion and the orbit line -->
-          <a href="mercury.html">
+  <!-- Creating Universe -->
+
+  <body class="view-3D fit">
+    <!-- Defineing the Universe Div -->
+    <div id="universe" class="size">
+          <div id="solar-system" class="earth">
+            <!-- Creating mercury and adding its postion and the orbit line -->
             <div id="mercury" class="path">
               <div class="position">
                 <div class="planet">
                 </div>
               </div>
             </div>
-          </a>
-          <!-- Creating venus and adding its postion and the orbit line -->
-          <a href="venus.html">
+            <!-- Creating venus and adding its postion and the orbit line -->
             <div id="venus" class="path">
               <div class="position">
                 <div class="planet">
                 </div>
               </div>
             </div>
-          </a>
-          <!-- Creating earth and adding its postion and the orbit line -->
-          <a href="earth.html">
+            <!-- Creating earth and adding its postion and the orbit line -->
             <div id="earth" class="path">
               <div class="position">
                 <div class="planet">
                 </div>
               </div>
             </div>
-          </a>
-          <!-- Creating mars and adding its postion and the orbit line -->
-          <a href="mars.html">
+            <!-- Creating mars and adding its postion and the orbit line -->
             <div id="mars" class="path" >
               <div class="position">
                 <div class="planet">
                 </div>
               </div>
             </div>
-          </a>
-          <!-- Creating jupiter and adding its postion and the orbit line -->
-          <a href="jupiter.html">
+            <!-- Creating jupiter and adding its postion and the orbit line -->
             <div id="jupiter" class="path">
               <div class="position">
                 <div class="planet">
                 </div>
               </div>
             </div>
-          </a>
-          <!-- Creating saturn and adding its postion and the orbit line -->
-          <a href="saturn.html">
+            <!-- Creating saturn and adding its postion and the orbit line -->
             <div id="saturn" class="path">
               <div class="position">
                 <div class="planet">
-                  <div class="ring">
-                  </div>
+                  <div class="ring"></div>
                 </div>
               </div>
             </div>
-          </a>
-          <!-- Creating uranus and adding its postion and the orbit line -->
-          <a href="uranus.html">
+            <!-- Creating uranus and adding its postion and the orbit line -->
             <div id="uranus" class="path">
               <div class="position">
                 <div class="planet">
                 </div>
               </div>
             </div>
-          </a>
-          <!-- Creating neptune and adding its postion and the orbit line -->
-          <a href="neptune.html">
+            <!-- Creating neptune and adding its postion and the orbit line -->
             <div id="neptune" class="path">
               <div class="position">
                 <div class="planet">

@@ -1,5 +1,8 @@
 /* importing fonts */
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 @import url('https://fonts.googleapis.com/css?family=Lato');
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
 
 
@@ -16,7 +19,6 @@ a {
 
 /* Body Quailitys */
 body {
-  font-size: 15px; 
   font-weight: 1;  
   background-color: black;
   overflow-x: hidden;
@@ -35,6 +37,62 @@ p {
   z-index: 100000;
 }
 
+/* Creating Side Navbar Style */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  
+  left: 0;
+  background-color: rgba(17, 17, 17,0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 100000;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .close {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Creating Hamber Menu Icon and Clickable area*/
+.Button {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  cursor: pointer;
+  z-index: 10;
+  margin-top: 20px;
+}
+.linemenu {
+  position: relative;
+  top: 4.2%;
+  left: 2%;
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  cursor: pointer;
+  margin-left: 50px;
+}
 
 /* Nav bar style */
 .menu {   /* Defining Bottom Nav Bar */
@@ -95,10 +153,10 @@ span {transition: color 0.1s ease;}  /* Transtion From White to Red */
   z-index: -7;
 }      
 
-.stars {background:#000 url(https://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;}
+.stars {background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;}
 
 .twinkling{
-  background:transparent url(https://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
   animation:move-twink-back 200s linear infinite;
 }
 
@@ -339,7 +397,44 @@ Revolution of planets in earth days (from Wikipedia)
 
 
 /* Responsive Additions */
-@media screen and (max-width: 4000px) { #universe {font-size: 40%;}
+
+@media screen and (min-width: 0px) {
+  #universe {
+    font-size: 30%; } }
+@media screen and (min-width: 900px) {
+  #universe {
+    font-size: 31%; } }
+@media screen and (min-width: 1000px) {
+  #universe {
+    font-size: 35%; } }
+@media screen and (min-width: 1100px) {
+  #universe {
+    font-size: 40%; } }
+@media screen and (min-width: 1100px) {
+  #universe {
+    font-size: 45%; } }
+@media screen and (min-width: 1500px) {
+      #universe {
+        font-size: 60%; } }
+@media screen and (max-height: 450px) {
+          .sidenav {padding-top: 15px;}
+          .sidenav a {font-size: 18px;}
+        }
+        
+@media screen and (max-width: 1364px) {
+          .menu {display: none;}
+          .sidenav, .button {display:block;}
+        }
+@media screen and (min-width: 1364px) {
+          .menu {display: block;}
+          .sidenav, .button, .linemenu {display:none;}
+        }    
+@media screen and (max-width: 1000px) {
+          .linemenu, .button{
+            margin-left: 20px;
+           } 
+        }
+
 /*END */
 
 
@@ -362,7 +457,7 @@ Revolution of planets in earth days (from Wikipedia)
 }
 /*END */
 
-/* Planets Shadow animations */
+/* Planets Shadow animations  https://css-tricks.com/almanac/properties/b/box-shadow/*/
 @keyframes shadowMercury {
   0% {box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5); /* TOP */ }
   25% {box-shadow: inset 5px 0 2px rgba(0, 0, 0, 0.5); /* LEFT */ }
@@ -435,7 +530,7 @@ Revolution of planets in earth days (from Wikipedia)
 /* Credit LIST :
 
 CREDIT: Heavily "Inspired" by @juliangarnier Solar System https://github.com/juliangarnier
-https://www.independent-software.com/deconstructing-css-3-making-of-css3-solar-system-animation-3d-transformations.html
+http://www.independent-software.com/deconstructing-css-3-making-of-css3-solar-system-animation-3d-transformations.html
 https://www.script-tutorials.com/night-sky-with-twinkling-stars/
 https://css-tricks.com/molten-leading-css/
 https://subvisual.co/blog/posts/62-perfecting-a-css-3d-animation/
@@ -445,5 +540,4 @@ https://www.w3schools.com/cssref/css3_pr_animation-timing-function.asp
 https://www.w3schools.com/css/css3_3dtransforms.asp
 https://www.w3schools.com/css/css_display_visibility.asp
 https://www.w3schools.com/css/css3_fonts.asp
-
  */

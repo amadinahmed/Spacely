@@ -1,7 +1,18 @@
 /* importing fonts */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 @import url('https://fonts.googleapis.com/css?family=Lato');
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
 /* Setting the Background */
+
+html, body{
+  height: 100%;
+}
+
+body{
+  font-family: 'Montserrat';
+  overflow: hidden;
+}
 
 a {
   color: transparent;
@@ -13,7 +24,8 @@ body {
   font-family: Raleway, sans-serif;;
   font-weight: 1;
   background-color: black;
-  color: rgba(255,255,255,1);  
+  color: rgba(255,255,255,1);
+  transition: background-color .5s;
 }
 
 * {
@@ -24,15 +36,29 @@ body {
 
 html{
   min-height: 100%;
-  overflow: hidden; 
+  overflow: hidden;
+  font-family: 'Montserrat';
 }
 
 body{ 
   height: calc(100vh - 8em);
   background: black;
+  font-family: 'Montserrat';
+  height: 100%;
  }
- /*END */
 
+main{
+  position: absolute;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+}
+
+canvas{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
 
 /* Background Style */
@@ -45,10 +71,10 @@ body{
   z-index: -1; 
 }
 
-.stars {background:#000 url(https://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;}
+.stars {background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;}
 
 .twinkling{
-  background:transparent url(https://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
   animation:move-twink-back 200s linear infinite;
 }
 /*END */
@@ -114,6 +140,57 @@ p {
   font-size:12px;
   color:#999;
 }
+/* Creating the Side Nav Bar */
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(17, 17, 17,0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .close {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.linemenu {
+  position: relative;
+  top: 2%;
+  left: 2%;
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  cursor: pointer;
+  margin-left: 50px;
+}
+.Button {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
 /*END */
 
 
@@ -141,7 +218,7 @@ p {
     position: absolute;
     top: 45%;
     left: -20px;
-    z-index: 10;
+    
 }
 /*END */
 
@@ -158,6 +235,7 @@ p {
   to{border-right-color: transparent;} 
 }
 
+
 @media screen and (max-width: 1000px) {
   .menu { bottom:0%;} 
 }
@@ -172,3 +250,24 @@ p {
 }
 
 /*END */
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+@media screen and (max-width: 1364px) {
+  .menu {display: none;}
+  .sidenav, .button {display:block;}
+}
+@media screen and (min-width: 1364px) {
+  .menu {display: block;}
+  .sidenav, .button, .linemenu {display:none;}
+}
+
+@media screen and (max-width: 1000px) {
+  .linemenu, .button{
+    margin-left: 20px;
+   } 
+}
+

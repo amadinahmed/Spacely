@@ -1,20 +1,53 @@
 
 <!doctype html>
+<html>
   <head>
-    <!-- Loading viewports Css Files and adding Fonts -->
 
+    <!-- Loading viewports Css Files and adding Fonts -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="stylesheet" href="../css/planet.css">
+    <script src="../js/main.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Title Bar -->
     <link rel="shortcut icon" href=../img/img.ico type="image/png">
     <title>Spacely/Venus</title>
+    
   </head>
+  <!-- Side nav bar  -->
+  <nav>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="close" onclick="closeNav()" style="font-size: 80px;" >
+          &times;<!-- https://www.w3schools.com/  https://wesbos.com/times-html-entity-close-button/  -->
+        </a>
+        <br>
+        <br>
+        <a href="../index.html">⠀Spacely</a>
+        <br>
+        <a href="universe.html">⠀SolarSystem</a>
+        <a href="mercury.html">⠀Mercury</a>
+        <a style="color: turquoise;" href="venus.html">⠀Venus</a>
+        <a href="earth.html">⠀Earth</a>
+        <a href="mars.html">⠀Mars</a>
+        <a href="jupiter.html">⠀Jupiter</a>
+        <a href="saturn.html">⠀Saturn</a>
+        <a href="uranus.html">⠀Uranus</a>
+        <a href="neptune.html">⠀Neptune</a>
+        <a href="pluto.html">⠀Pluto</a>
+        <a href="#">⠀News</a>
+        <a href="aboutus.html">⠀About Us</a>
+      </div>
+      <div onclick="openNav()" class="Button">
+          <div onclick="openNav()" class="linemenu"></div>
+          <div onclick="openNav()" class="linemenu"></div>
+          <div onclick="openNav()" class="linemenu"></div>
+        </div>
+</nav>
+
   <body>
   <!-- Planets Venus Div  -->
   <div class="venus" >
@@ -38,9 +71,10 @@
       </p>  
     </div>
   </div>
-  <!-- Background  -->
+  <!-- Background Stars -->
   <div class="stars"></div>
   <div class="twinkling"></div>
+  <!-- Bottom Nav bar -->
   <div class="menu">
     <div class="label style"></div>
     <div class="spacer"></div>
@@ -103,6 +137,6 @@
       <div class="planet-names">
         <span>About Us</span>
       </div>
-  </div>
-</body>
-
+    </div>
+  </body>
+</html>
