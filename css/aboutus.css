@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
 /* General Propeties */
+
+body, html{
+    overflow-x: hidden;
+}
+
 body
 {
 	
