@@ -11,6 +11,7 @@ body
   overflow-y: auto;
   color: white; 
   -webkit-overflow-scrolling:touch;
+  overflow-x: hidden;
 }
 
 * { 
@@ -35,7 +36,8 @@ a {  /* a tags */
 	background-attachment: fixed;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+  align-items: center;
+  overflow-x: hidden;
 }
 /* Defining the Main Text  */
 .header
@@ -50,7 +52,8 @@ a {  /* a tags */
 	background-attachment: fixed;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+  align-items: center;
+  overflow-x: hidden;
 
 }
 
@@ -65,7 +68,8 @@ a {  /* a tags */
 	padding: 20px;
 	text-align: center;
 	max-height: 80%;
-	box-shadow: 0 20px 20px rgba(0,0,0,.5)
+  box-shadow: 0 20px 20px rgba(0,0,0,.5);
+  overflow-x: hidden;
 }
 /* Section fot the Text  */
 section
@@ -84,7 +88,8 @@ section
   margin: 0 auto;
   position: relative;
 	padding: 0 2%;
-	padding: 50px 2% 250px;
+  padding: 50px 2% 250px;
+  overflow-x: hidden;
 }
 
 
@@ -93,12 +98,14 @@ h1 {
   line-height: 1.8;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
 }
 
 p {
   margin-bottom: 20px;
   font-size: 17px;
   line-height: 2;
+  overflow-x: hidden;
 }
 
 /* Properties for the Header Text  */
@@ -107,13 +114,15 @@ section h2
 	margin: 0 0 50px;
 	padding: 0;
 	font-size: 3.5em;
-	color: #fff;
+  color: #fff;
+  overflow-x: hidden;
 }
 /* Properties for the paragraph Text  */
 section p
 {
 	color: #fff;
-	font-size: 1.3em;
+  font-size: 1.3em;
+  overflow-x: hidden;
 }
 
 
@@ -128,7 +137,7 @@ section p
   cursor: pointer;
 	margin-left: 50px;
 	z-index: 10;
-	
+  overflow-x: hidden;
 }
 .Button {
   position: relative;
@@ -136,7 +145,8 @@ section p
 	cursor: pointer;
 	z-index: 10;
 	margin-top: 40px;
-	margin-left: 33px;
+  margin-left: 33px;
+  overflow-x: hidden;
 }
 
 
@@ -215,7 +225,8 @@ section p
   overflow-x: hidden;
   transition: 0.5s;
 	padding-top: 60px;
-	z-index: 11;
+  z-index: 11;
+  overflow-x: hidden;
 }
 
 .sidenav a {
