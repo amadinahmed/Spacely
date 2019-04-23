@@ -232,6 +232,7 @@ section p
 	padding-top: 60px;
   z-index: 11;
   overflow-x: hidden;
+	-webkit-overflow-scrolling:touch;
 }
 
 .sidenav a {
