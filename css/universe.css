@@ -43,7 +43,7 @@ p {
   width: 0;
   position: fixed;
   z-index: 1;
-  
+  -webkit-overflow-scrolling:touch;
   left: 0;
   background-color: rgba(17, 17, 17,0.9);
   overflow-x: hidden;
