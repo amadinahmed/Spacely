@@ -517,12 +517,21 @@ body {
       .sidenav {padding-top: 15px;}
       .sidenav a {font-size: 18px;}
     }
-    
-@media screen and (max-width: 1364px) {
+@media screen and (max-height: 796px) {
       .menu {display: none;}
       .sidenav, .button {display:block;}
     }
-@media screen and (min-width: 1364px) {
+
+@media screen and (max-width: 1384px) {
+      .menu {display: none;}
+      .sidenav, .button {display:block;}
+    }
+@media screen and (min-width: 1384px) {
+      .menu {display: block;}
+      .sidenav, .button, .linemenu {display:none;}
+    }
+
+@media screen and (min-height: 796px) {
       .menu {display: block;}
       .sidenav, .button, .linemenu {display:none;}
     }
