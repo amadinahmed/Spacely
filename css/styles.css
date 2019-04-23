@@ -153,6 +153,7 @@ p {
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  -webkit-overflow-scrolling:touch;
 }
 
 .sidenav a {
