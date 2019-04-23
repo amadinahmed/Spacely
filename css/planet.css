@@ -133,6 +133,7 @@ body {
   transition: 0.5s;
   padding-top: 60px;
   z-index: 100000;
+  -webkit-overflow-scrolling:touch;
 }
 
 .sidenav a {
