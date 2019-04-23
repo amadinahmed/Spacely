@@ -12,8 +12,8 @@ body{
   box-sizing: border-box;}
 
 a { 
-  color: transparent; 
-  text-decoration: none;} 
+  text-decoration: none;
+} 
   
 /* Nav bar style */
 .menu {   /* Defining Bottom Nav Bar */
